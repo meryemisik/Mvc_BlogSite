@@ -1,0 +1,21 @@
+﻿
+@model IEnumerable<MI.AriBilgi.UI.Models.hakkinda>
+
+@foreach (var item in Model)
+{
+    <div class="post-title margin-bottom-30">
+        <h1>Merhaba, ben <span class="main-color">@item.Adi @item.Soyadi</span></h1>
+
+        <ul class="knowledge">
+            
+            <li class="bg-color-1">Web Designer</li>
+            <li class="bg-color-4">Web Developer</li>
+            <li class="bg-color-6">Freelancer</li>
+            <li class="bg-color-5">Consultant</li>
+        </ul>
+
+    </div>
+    <p>@item.Aciklama</p>
+    
+
+}

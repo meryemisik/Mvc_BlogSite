@@ -1,0 +1,55 @@
+﻿@model MI.AriBilgi.DLL.Service
+
+@{
+    ViewBag.Title = "ServiceDelete";
+    Layout = "~/Areas/AdminPaneli/Views/Shared/AdminLayout.cshtml";
+}
+
+<div style="margin:8px;">
+
+    <section class="content" style="margin-top:8px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">SERVİS SİL</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: block;">
+
+                        <div>
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.ServiceAdi)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.ServiceAdi)
+                                </dd>
+
+                            </dl>
+
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Servis Sil" class="btn btn-info float-right">
+                            @Html.ActionLink("Servis Listesine Git", "ServicesAdminIndex", "", new { @class = "btn btn-secondary" })
+                        </div>
+                            }
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

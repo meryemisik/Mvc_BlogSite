@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BlogSiteDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Articles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="UyeID" Type="Int32" />
+    <Property Name="CategoryID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ArticlesPictures">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PictureSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PictureMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PictureLarge" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ArticleID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Etiket">
+    <Key>
+      <PropertyRef Name="EtiketID" />
+    </Key>
+    <Property Name="EtiketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EtiketAdi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hakkinda">
+    <Key>
+      <PropertyRef Name="HakkindaID" />
+    </Key>
+    <Property Name="HakkindaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Beceriler" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sure" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="Int32" />
+    <Property Name="Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ProjectPictures">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PictureSmall" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PictureMedium" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PictureLarge" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProjectId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Uyeler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UyeAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UyeSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Yazarmi" Type="Boolean" Nullable="false" />
+    <Property Name="UyelikTarih" Type="DateTime" Precision="0" />
+    <Property Name="Aktifmi" Type="Boolean" Nullable="false" />
+    <Property Name="YetkiId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Yetenek">
+    <Key>
+      <PropertyRef Name="YetenekId" />
+    </Key>
+    <Property Name="YetenekId" Type="Int32" Nullable="false" />
+    <Property Name="YetenekAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Yetkiler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YetkiAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Yorum">
+    <Key>
+      <PropertyRef Name="YorumID" />
+    </Key>
+    <Property Name="YorumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Yorum1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MakaleID" Type="Int32" />
+    <Property Name="EklenmeTarihi" Type="DateTime" Precision="3" />
+    <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Begeni" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="BlogSiteDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Articles" EntityType="Self.Articles" />
+    <EntitySet Name="ArticlesPictures" EntityType="Self.ArticlesPictures" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" />
+    <EntitySet Name="Etiket" EntityType="Self.Etiket" />
+    <EntitySet Name="hakkinda" EntityType="Self.hakkinda" />
+    <EntitySet Name="Project" EntityType="Self.Project" />
+    <EntitySet Name="ProjectPictures" EntityType="Self.ProjectPictures" />
+    <EntitySet Name="Service" EntityType="Self.Service" />
+    <EntitySet Name="Uyeler" EntityType="Self.Uyeler" />
+    <EntitySet Name="Yetenek" EntityType="Self.Yetenek" />
+    <EntitySet Name="Yetkiler" EntityType="Self.Yetkiler" />
+    <EntitySet Name="Yorum" EntityType="Self.Yorum" />
+  </EntityContainer>
+</Schema>

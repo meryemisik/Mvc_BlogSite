@@ -1,0 +1,15 @@
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\bin\Debug\MI.AriBilgi.BLL.dll.config
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\bin\Debug\MI.AriBilgi.BLL.dll
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\bin\Debug\MI.AriBilgi.BLL.pdb
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\bin\Debug\EntityFramework.dll
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\bin\Debug\MI.AriBilgi.DLL.dll
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\bin\Debug\MI.AriBilgi.DLL.pdb
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\bin\Debug\MI.AriBilgi.DLL.dll.config
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\bin\Debug\EntityFramework.xml
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\obj\Debug\MI.AriBilgi.BLL.csprojAssemblyReference.cache
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\obj\Debug\MI.AriBilgi.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\obj\Debug\MI.AriBilgi.BLL.csproj.CopyComplete
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\obj\Debug\MI.AriBilgi.BLL.dll
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.BLL\obj\Debug\MI.AriBilgi.BLL.pdb

@@ -1,0 +1,93 @@
+﻿@model MI.AriBilgi.DLL.Uyeler
+
+@{
+    ViewBag.Title = "UyeDelete";
+    Layout = "~/Areas/AdminPaneli/Views/Shared/AdminLayout.cshtml";
+}
+<div style="margin:8px;">
+
+    <section class="content" style="margin-top:8px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">ÜYE SİL</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: block;">
+
+                        <div>
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.UyeAdi)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.UyeAdi)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.UyeSifre)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.UyeSifre)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Yazarmi)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Yazarmi)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.UyelikTarih)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.UyelikTarih)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Aktifmi)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Aktifmi)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.YetkiId)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.YetkiId)
+                                </dd>
+
+                            </dl>
+
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Üye Sil" class="btn btn-primary float-right">
+                            @Html.ActionLink("Üye Listesine Git", "UyelerAdminIndex", "", new { @class = "btn btn-secondary" })
+
+                        </div>
+                            }
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+

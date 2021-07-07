@@ -1,0 +1,103 @@
+﻿@using MI.AriBilgi.UI.Models;
+@model IEnumerable<Project>
+@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12 page-body">
+    <div class="row">
+
+
+        <div class="sub-title">
+            <h2>My Portfolio</h2>
+            <a href="contact.html"><i class="icon-envelope"></i></a>
+        </div>
+
+
+        <div class="col-md-12 content-page">
+            <div class="col-md-12 blog-post">
+
+
+                <!-- Intro Start -->
+                <div class="post-title margin-bottom-30">
+                    <h2>Projelerim</h2>
+                </div>
+               
+                <div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="row portfolio">
+                            <div class="col-sm-6 custom-pad-1">
+                                <img src="~/DevBlog/images/portfolio/1.jpg" class="img-responsive" alt="">
+                            </div>
+
+
+                            <div class="col-sm-6 custom-pad-2">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <tbody>
+
+                                            <tr>
+                                                <td><b>Beceriler</b></td>
+                                                <td>@item.Beceriler</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><b>Kullanım süresi</b></td>
+                                                <td>@item.Sure</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><b>Fiyat</b></td>
+                                                <td>$@item.Fiyat</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><b>Url</b></td>
+                                                <td><a href="@item.Url" title="uipasta">İncele</a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><b>Proje Hakkında</b></td>
+                                                <td>
+                                                    @item.Content
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+
+           
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Subscribe Form Start -->
+    <div class="col-md-8 col-md-offset-2">
+        <form id="mc-form" method="post" action="http://uipasta.us14.list-manage.com/subscribe/post?u=854825d502cdc101233c08a21&amp;id=86e84d44b7">
+
+            <div class="subscribe-form margin-top-20">
+                <input id="mc-email" type="email" placeholder="Email Address" class="text-input">
+                <button class="submit-btn" type="submit">Submit</button>
+            </div>
+            <p>Subscribe to my weekly newsletter</p>
+            <label for="mc-email" class="mc-label"></label>
+        </form>
+
+    </div>
+    <!-- Subscribe Form End -->
+
+
+</div>

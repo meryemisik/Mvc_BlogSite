@@ -1,0 +1,57 @@
+﻿@using MI.AriBilgi.UI.Models;
+
+@model IEnumerable<Articles>
+
+@{
+    ViewBag.Title = "Article";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using MI.AriBilgi.BLL;
+
+<div class="col-md-12 page-body">
+    <div class="row">
+
+        <div class="sub-title">
+            <h2>My Blog</h2>
+            <a href="contact.html"><i class="icon-envelope"></i></a>
+        </div>
+        <div class="col-md-12 content-page">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-12 blog-post">
+                    <div class="post-image">
+                        <img src="~/DevBlog/images/blog/1.jpg" alt="">
+                    </div>
+                    <div class="post-title">
+                        <a href="/Article/ArticleDetails/@item.Id"><h1>@item.Title</h1></a>
+                    </div>
+                    <div class="post-info">
+                        <span>@item.CreateDate.Value.ToShortDateString() <a href="#" target="_blank">
+
+                       
+
+</a></span>
+                    </div>
+                    <p>
+                    @{ 
+                        string icerik;
+                        if (item.Content.Length > 50)
+                        {
+                            icerik = item.Content.Substring(0, 200);
+                        }
+                        else
+                        {
+                            icerik = item.Content;
+                        }
+                    }
+                    @icerik
+                    
+                    </p>
+                    <a href="/Article/ArticleDetails/@item.Id" class="button button-style button-anim fa fa-long-arrow-right"><span>Devamını oku..</span></a>
+                </div>
+            }
+        </div>
+
+    </div>
+
+    </div>

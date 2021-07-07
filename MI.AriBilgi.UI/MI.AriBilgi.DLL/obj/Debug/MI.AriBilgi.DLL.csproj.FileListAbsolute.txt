@@ -1,0 +1,12 @@
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\bin\Debug\MI.AriBilgi.DLL.dll.config
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\bin\Debug\MI.AriBilgi.DLL.dll
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\bin\Debug\MI.AriBilgi.DLL.pdb
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\bin\Debug\EntityFramework.dll
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\bin\Debug\EntityFramework.xml
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\obj\Debug\MI.AriBilgi.DLL.csprojAssemblyReference.cache
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\obj\Debug\MI.AriBilgi.DLL.csproj.CoreCompileInputs.cache
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\obj\Debug\MI.AriBilgi.DLL.csproj.CopyComplete
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\obj\Debug\MI.AriBilgi.DLL.dll
+C:\Users\Meryem\source\repos\MI.AriBilgi.UI\MI.AriBilgi.DLL\obj\Debug\MI.AriBilgi.DLL.pdb

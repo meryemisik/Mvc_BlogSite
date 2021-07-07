@@ -1,0 +1,88 @@
+﻿@model MI.AriBilgi.DLL.Articles
+
+@{
+    ViewBag.Title = "ArticleDelete";
+    Layout = "~/Areas/AdminPaneli/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div style="margin:8px;">
+
+        <section class="content" style="margin-top:8px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-danger">
+                        <div class="card-header">
+                            <h3 class="card-title">MAKALE SİL</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body" style="display: block;">
+
+                            <div>
+
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Title)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Title)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.Content)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Content)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.CreateDate)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.CreateDate)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.UyeID)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.UyeID)
+                                    </dd>
+
+                                    <dt>
+                                        @Html.DisplayNameFor(model => model.CategoryID)
+                                    </dt>
+
+                                    <dd>
+                                        @Html.DisplayFor(model => model.CategoryID)
+                                    </dd>
+
+                                </dl>
+
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.AntiForgeryToken()
+
+                            <div class="form-actions no-color">
+                                <input type="submit" value="Makale Sil" class="btn btn-danger float-right">
+                                @Html.ActionLink("Makale Listesine Git", "ArticleAdminIndex", "", new { @class = "btn btn-secondary" })
+
+                            </div>
+                                }
+                            </div>                            
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </section>    
+</div>
+

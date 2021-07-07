@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BlogSiteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Articles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UyeID" Type="int" />
+    <Property Name="CategoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="ArticlesPictures">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PictureSmall" Type="nvarchar(max)" />
+    <Property Name="PictureMedium" Type="nvarchar(max)" />
+    <Property Name="PictureLarge" Type="nvarchar(max)" />
+    <Property Name="ArticleID" Type="int" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Etiket">
+    <Key>
+      <PropertyRef Name="EtiketID" />
+    </Key>
+    <Property Name="EtiketID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EtiketAdi" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hakkinda">
+    <Key>
+      <PropertyRef Name="HakkindaID" />
+    </Key>
+    <Property Name="HakkindaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Soyadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Content" Type="nvarchar(max)" />
+    <Property Name="Beceriler" Type="nvarchar(max)" />
+    <Property Name="Sure" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fiyat" Type="int" />
+    <Property Name="Url" Type="nvarchar" MaxLength="50" />
+    <Property Name="Resim" Type="image" />
+  </EntityType>
+  <EntityType Name="ProjectPictures">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PictureSmall" Type="image" />
+    <Property Name="PictureMedium" Type="image" />
+    <Property Name="PictureLarge" Type="image" />
+    <Property Name="ProjectId" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Uyeler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UyeAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UyeSifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Yazarmi" Type="bit" Nullable="false" />
+    <Property Name="UyelikTarih" Type="date" />
+    <Property Name="Aktifmi" Type="bit" Nullable="false" />
+    <Property Name="YetkiId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Yetenek">
+    <Key>
+      <PropertyRef Name="YetenekId" />
+    </Key>
+    <Property Name="YetenekId" Type="int" Nullable="false" />
+    <Property Name="YetenekAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Yetkiler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YetkiAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Yorum">
+    <Key>
+      <PropertyRef Name="YorumID" />
+    </Key>
+    <Property Name="YorumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Yorum" Type="nvarchar(max)" />
+    <Property Name="MakaleID" Type="int" />
+    <Property Name="EklenmeTarihi" Type="datetime" />
+    <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Begeni" Type="int" />
+  </EntityType>
+  <EntityContainer Name="BlogSiteDBModelStoreContainer">
+    <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticlesPictures" EntityType="Self.ArticlesPictures" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Etiket" EntityType="Self.Etiket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hakkinda" EntityType="Self.hakkinda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectPictures" EntityType="Self.ProjectPictures" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Uyeler" EntityType="Self.Uyeler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yetenek" EntityType="Self.Yetenek" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yetkiler" EntityType="Self.Yetkiler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yorum" EntityType="Self.Yorum" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

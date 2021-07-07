@@ -1,0 +1,99 @@
+﻿@model IEnumerable<MI.AriBilgi.DLL.Project>
+
+@{
+    ViewBag.Title = "ProjectAdminIndex";
+    Layout = "~/Areas/AdminPaneli/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div style=" margin:8px;">
+
+    <section class="content" style="margin-top:8px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" style="background-color:#343a40; color:white;">
+                        <h3 class="card-title">PROJE LİSTESİ</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: block;">
+                        <table class="table table-hover" style="text-align:center;">
+                            <tr>
+                                <th style="        border: 1px solid #ffc107;">
+                                    Başlık
+                                </th>
+                                <th style="        border: 1px solid #ffc107;">
+                                    İçerik
+                                </th>
+                                <th style="        border: 1px solid #ffc107;">
+                                    Beceriler
+                                </th>
+                                <th style="        border: 1px solid #ffc107;">
+                                    Süre
+                                </th>
+                                <th style="        border: 1px solid #ffc107;">
+                                    Fiyat
+                                </th>
+                                <th style="        border: 1px solid #ffc107;">
+                                    URL
+                                </th>
+                                @*<th style="        border: 1px solid #ffc107;">
+                                    Resim
+                                </th>*@
+                                <th style="border:1px solid #ffc107;">
+                                    İşlemler
+                                </th>
+
+                            </tr>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td style="width:10%;">
+                                        @Html.DisplayFor(modelItem => item.Title)
+                                    </td>
+                                    <td style="width:20%;">
+                                        @Html.DisplayFor(modelItem => item.Content)
+                                    </td>
+                                    <td style="width:10%;">
+                                        @Html.DisplayFor(modelItem => item.Beceriler)
+                                    </td>
+                                    <td style="width:10%;">
+                                        @Html.DisplayFor(modelItem => item.Sure)
+                                    </td>
+                                    <td style="width:10%;">
+                                        @Html.DisplayFor(modelItem => item.Fiyat)
+                                    </td>
+                                    <td >
+                                        @Html.DisplayFor(modelItem => item.Url)
+                                    </td>
+                                    @*<td style="width:10%;">
+                                        @Html.DisplayFor(modelItem => item.Resim)
+                                    </td>*@
+                                    <td style="width:20%;">
+                                        @Html.ActionLink("Edit", "ProjectEdit", new { id = item.Id }, new { @class = "btn btn-sm btn-outline-success fas fa-edit" }) |
+                                        @Html.ActionLink("Delete", "ProjectDelete", new { id = item.Id }, new { @class = "btn btn-sm btn-outline-danger fas fa-trash-alt" })
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+
+                        <p style="margin:8px;">
+                            @Html.ActionLink("Proje Ekleme Sayfasına Git", "CreateProject", "ProjectAdmin", new { @class = "btn btn-warning float-right" })
+                        </p>
+                    </div>
+
+
+                      
+                    </div>
+                </div>
+            </div>
+            </section>
+
+                    </div>

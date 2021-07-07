@@ -1,0 +1,15 @@
+﻿
+@model IEnumerable<MI.AriBilgi.UI.Models.Service>
+<div class="list list-style-2 margin-top-30">
+
+
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.ServiceAdi</li>
+        }
+
+
+    </ul>
+
+</div>
